@@ -23,7 +23,7 @@ export default function Footer() {
                 <i className="fab fa-facebook-f text-xl"></i>
               </a>
               <a href="https://x.com/Listenthenspk" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
-                <i className="fab fa-x-twitter text-xl"></i>
+                <span className="text-xl font-bold">𝕏</span>
               </a>
               <a href="https://www.linkedin.com/in/jahmaalmarshall" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
                 <i className="fab fa-linkedin-in text-xl"></i>
