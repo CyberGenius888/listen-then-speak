@@ -6,7 +6,6 @@ import About from "@/components/sections/About";
 import Process from "@/components/sections/Process";
 import Booking from "@/components/sections/Booking";
 import Counseling from "@/components/sections/Counseling";
-import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
@@ -56,7 +55,6 @@ export default function Home() {
       <Process />
       <Booking />
       <Counseling />
-      <FAQ />
       <CTA />
       <Footer />
 
