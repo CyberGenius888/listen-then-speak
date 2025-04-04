@@ -19,16 +19,13 @@ export default function Footer() {
               Professional coaching that transforms overwhelm into focused action.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
+              <a href="https://www.facebook.com/jahmaal.marshall" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
                 <i className="fab fa-facebook-f text-xl"></i>
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
-                <i className="fab fa-twitter text-xl"></i>
+              <a href="https://x.com/Listenthenspk" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
+                <i className="fab fa-x-twitter text-xl"></i>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
-                <i className="fab fa-instagram text-xl"></i>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
+              <a href="https://www.linkedin.com/in/jahmaalmarshall" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
                 <i className="fab fa-linkedin-in text-xl"></i>
               </a>
             </div>
@@ -68,13 +65,6 @@ export default function Footer() {
               <li className="flex items-start">
                 <i className="fas fa-envelope text-[#FF7A00] mt-1 mr-3"></i>
                 <span className="text-gray-600">Jahmaal@listenthenspeak.com</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-map-marker-alt text-[#FF7A00] mt-1 mr-3"></i>
-                <span className="text-gray-600">
-                  123 Coaching Street<br />
-                  Clarity City, CS 98765
-                </span>
               </li>
             </ul>
           </div>
