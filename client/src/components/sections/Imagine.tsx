@@ -53,17 +53,6 @@ export default function Imagine() {
             </motion.div>
           ))}
         </div>
-        
-        <div className="mt-12 text-center">
-          <a 
-            href="https://calendly.com/listenthenspeak/30min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-4 rounded-md font-bold transition-all hover:shadow-lg text-lg"
-          >
-            Start Your Transformation Today
-          </a>
-        </div>
       </div>
     </section>
   );
