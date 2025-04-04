@@ -166,9 +166,6 @@ export default function FeaturedIn() {
                         className="max-h-28 w-auto object-contain transition-all duration-300"
                       />
                     </motion.div>
-                    <div className="text-center mt-2 text-sm font-medium opacity-80">
-                      {company.name === "FORCE Magazine" ? "FORCE Magazine - March 2025" : company.name}
-                    </div>
                   </a>
                 </CarouselItem>
               ))}
