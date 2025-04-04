@@ -41,32 +41,38 @@ export default function Services() {
         
         <div className="mt-16 bg-gray-light rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="font-[Playfair_Display] text-2xl md:text-3xl font-bold mb-4">The Relief You're Looking For</h3>
-              <p className="text-gray-600 mb-6">
-                Many clients come to me feeling stuck, overwhelmed, and uncertain about their future. Through our work together, they discover clarity, purpose, and a renewed sense of direction.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="text-[#FF7A00] mr-3 mt-1"><i className="fas fa-check-circle"></i></div>
-                  <p>Personalized strategies tailored to your unique situation</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="text-[#FF7A00] mr-3 mt-1"><i className="fas fa-check-circle"></i></div>
-                  <p>Practical tools you can implement immediately</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="text-[#FF7A00] mr-3 mt-1"><i className="fas fa-check-circle"></i></div>
-                  <p>Ongoing support between sessions</p>
-                </div>
-              </div>
+            <div className="order-2 md:order-1">
+              <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/8Ha_q8WhZtA?si=e7_BSrnHghn_UesS" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+                className="rounded-lg shadow-md"
+              ></iframe>
             </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1627483297886-49710ae1fc22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" 
-                alt="Person feeling relieved and unburdened" 
-                className="rounded-lg shadow-md w-full h-auto" 
-              />
+            <div className="order-1 md:order-2">
+              <h3 className="font-[Playfair_Display] text-2xl md:text-3xl font-bold mb-4">Reclaim your time and Reduce your stress</h3>
+              <p className="text-gray-600 mb-4">
+                Leadership often feels like walking tightrope balancing innovation, performance, and people management all while trying to shield yourself from the creeping shadows of stress and burnout.
+              </p>
+              <p className="text-gray-600 mb-4">
+                Here's the truth: You don't have to choose between performance and well-being. When leaders are supported, both the top line and the bottom line grow stronger.
+              </p>
+              <p className="text-gray-600 mb-4">
+                Burnout doesn't have to be the cost of success. If you are ready to change the narrative and take action let's get started.
+              </p>
+              <div className="mt-6">
+                <a 
+                  href="#ebook" 
+                  className="inline-block bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
+                >
+                  TAKE ACTION!
+                </a>
+              </div>
             </div>
           </div>
         </div>
