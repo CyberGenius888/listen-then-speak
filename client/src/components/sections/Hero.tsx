@@ -23,10 +23,7 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-4 rounded-md font-semibold text-center transition-colors text-lg h-auto">
-                <a href="#book">Get on my calendar today</a>
-              </Button>
-              <Button asChild variant="outline" className="border-2 border-[#FF7A00] text-[#FF7A00] hover:bg-[#FF7A00] hover:text-white px-8 py-4 rounded-md font-semibold text-center transition-colors text-lg h-auto">
-                <a href="#services">Learn more</a>
+                <a href="https://calendly.com/listenthenspeak/30min" target="_blank" rel="noopener noreferrer">BOOK A FREE DISCOVERY SESSION!</a>
               </Button>
             </div>
           </motion.div>
