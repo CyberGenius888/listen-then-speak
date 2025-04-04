@@ -5,7 +5,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import About from "@/components/sections/About";
 import Process from "@/components/sections/Process";
 import Booking from "@/components/sections/Booking";
-import Counseling from "@/components/sections/Counseling";
+import Podcast from "@/components/sections/Podcast";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
@@ -54,7 +54,7 @@ export default function Home() {
       <About />
       <Process />
       <Booking />
-      <Counseling />
+      <Podcast />
       <CTA />
       <Footer />
 

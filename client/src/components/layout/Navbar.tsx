@@ -25,8 +25,8 @@ export default function Navbar() {
             <Link href="/#testimonials">
               <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Testimonials</span>
             </Link>
-            <Link href="/#counseling">
-              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Counseling</span>
+            <Link href="/#podcast">
+              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Podcast</span>
             </Link>
             <Link href="/#process">
               <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Process</span>
