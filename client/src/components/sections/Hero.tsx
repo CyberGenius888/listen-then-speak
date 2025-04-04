@@ -12,7 +12,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <h1 className="font-[Playfair_Display] text-4xl md:text-5xl lg:text-6xl font-bold text-gray-dark leading-tight mb-6">
+            <h1 className="font-[Playfair_Display] text-4xl md:text-5xl lg:text-6xl font-bold italic text-gray-800 leading-tight mb-6 tracking-tight">
               MENTAL HEALTH AND WELLNESS PROGRAMS SERVING TECH EXECUTIVES
             </h1>
             <p className="text-lg md:text-xl mb-4 text-gray-600">
