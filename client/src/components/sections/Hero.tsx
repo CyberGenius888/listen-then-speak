@@ -13,10 +13,13 @@ export default function Hero() {
             transition={{ duration: 0.7 }}
           >
             <h1 className="font-[Playfair_Display] text-4xl md:text-5xl lg:text-6xl font-bold text-gray-dark leading-tight mb-6">
-              Find Relief From Feeling Overwhelmed
+              MENTAL HEALTH AND WELLNESS PROGRAMS SERVING TECH EXECUTIVES
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-gray-600">
-              Are you looking for proven help to keep you from continually feeling overwhelmed and burdened by life? I can be that help for you.
+            <p className="text-lg md:text-xl mb-4 text-gray-600">
+              Break free from stress, anxiety and perfectionism.
+            </p>
+            <p className="text-lg md:text-xl mb-8 text-[#FF7A00] font-semibold">
+              Listen Then Speak because your voice matters.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-4 rounded-md font-semibold text-center transition-colors text-lg h-auto">
