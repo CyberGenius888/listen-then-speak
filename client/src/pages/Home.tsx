@@ -5,7 +5,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FeaturedIn from "@/components/sections/FeaturedIn";
 import About from "@/components/sections/About";
 import Process from "@/components/sections/Process";
-import Booking from "@/components/sections/Booking";
+import Ebook from "@/components/sections/Ebook";
 import Podcast from "@/components/sections/Podcast";
 import CTA from "@/components/sections/CTA";
 import StatsBanner from "@/components/sections/StatsBanner";
@@ -58,17 +58,17 @@ export default function Home() {
       <FeaturedIn />
       <About />
       <Process />
-      <Booking />
+      <Ebook />
       <CTA />
       <Footer />
 
-      {/* Floating Contact Button */}
+      {/* Floating eBook Download Button */}
       <div className="fixed bottom-8 right-8 z-30">
         <a 
-          href="#book" 
+          href="#ebook" 
           className="bg-[#FF7A00] hover:bg-[#E56E00] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors"
         >
-          <i className="fas fa-calendar-check text-xl"></i>
+          <i className="fas fa-book text-xl"></i>
         </a>
       </div>
     </div>
