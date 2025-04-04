@@ -10,6 +10,7 @@ import Ebook from "@/components/sections/Ebook";
 import Podcast from "@/components/sections/Podcast";
 import CTA from "@/components/sections/CTA";
 import StatsBanner from "@/components/sections/StatsBanner";
+import Newsletter from "@/components/sections/Newsletter";
 import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
 
@@ -61,6 +62,7 @@ export default function Home() {
       <About />
       <Process />
       <Ebook />
+      <Newsletter />
       <CTA />
       <Footer />
 
