@@ -19,7 +19,12 @@ export default function Home() {
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const anchor = target.closest('a[href^="#"]');
+      let anchor = target.closest('a[href^="#"]');
+      
+      // If target itself is the anchor, use it directly
+      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+        anchor = target;
+      }
       
       if (anchor && anchor.getAttribute('href') !== '#') {
         e.preventDefault();
@@ -27,12 +32,12 @@ export default function Home() {
         const targetId = anchor.getAttribute('href');
         if (!targetId) return;
         
-        const targetElement = document.querySelector(targetId);
+        const targetElement = document.getElementById(targetId.replace('#', ''));
         
         if (targetElement) {
           const headerOffset = 80;
           const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
           
           window.scrollTo({
             top: offsetPosition,
