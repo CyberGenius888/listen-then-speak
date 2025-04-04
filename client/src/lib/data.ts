@@ -65,22 +65,16 @@ export const services: Service[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    content: "The coaching sessions gave me practical tools to manage my stress and prioritize what truly matters. I feel lighter and more in control now.",
-    name: "Jennifer L.",
-    position: "Marketing Executive",
-    initials: "JL"
+    content: "While coaching Jahmaal will focus intently on his clients, giving them every bit of his attention. During my time with Jahmaal, he showed an unending amount of patience, and he can listen attentively while analyzing the issue at hand. Because of this, he can hone into specifics and work with clients on creating a plan that will guide them to a resolution instead of a band-aid.",
+    name: "Clay Sibert",
+    position: "Business Analyst | Vendor Management & Accountability",
+    initials: "CS"
   },
   {
-    content: "I was skeptical at first, but the coaching process helped me identify patterns that were keeping me stuck. Now I have clarity and purpose.",
-    name: "David P.",
-    position: "Small Business Owner",
-    initials: "DP"
-  },
-  {
-    content: "The personalized approach made all the difference. My coach really listened and created strategies specific to my challenges. Life-changing!",
-    name: "Amanda W.",
-    position: "Healthcare Professional",
-    initials: "AW"
+    content: "Working with Jahmaal Marshall has been a game changer for me. He coached me to find root causes of why I show up the way I do as a leader today. And we went back to experiences from my childhood that I am still working on healing from. He is attentive, customized each of our sessions, and provided impactful and engaging homework assignments that I was excited to dig into.",
+    name: "Mita Mallick",
+    position: "Product Manager & Director",
+    initials: "MM"
   }
 ];
 
