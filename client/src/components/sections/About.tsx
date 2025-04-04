@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import listenThenSpeakImage from "../../assets/listen_then_speak.png";
 
 export default function About() {
   const stats = [
@@ -14,8 +14,8 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-              alt="Professional coach in a coaching session" 
+              src={listenThenSpeakImage} 
+              alt="Listen Then Speak - Why Not?" 
               className="rounded-lg shadow-lg w-full h-auto" 
             />
           </div>
@@ -35,9 +35,6 @@ export default function About() {
                 </div>
               ))}
             </div>
-            <Button asChild className="bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-4 rounded-md font-semibold transition-colors h-auto">
-              <a href="#book">Work with me</a>
-            </Button>
           </div>
         </div>
       </div>
