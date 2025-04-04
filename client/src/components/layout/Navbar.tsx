@@ -16,24 +16,24 @@ export default function Navbar() {
 
           {/* Navigation Links - Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/#services">
-              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Services</span>
-            </Link>
-            <Link href="/#podcast">
-              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Podcast</span>
-            </Link>
-            <Link href="/#testimonials">
-              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Testimonials</span>
-            </Link>
-            <Link href="/#about">
-              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">About</span>
-            </Link>
-            <Link href="/#process">
-              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Process</span>
-            </Link>
-            <Link href="/#newsletter">
-              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Newsletter</span>
-            </Link>
+            <a href="#services" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
+              Services
+            </a>
+            <a href="#podcast" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
+              Podcast
+            </a>
+            <a href="#testimonials" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
+              Testimonials
+            </a>
+            <a href="#about" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
+              About
+            </a>
+            <a href="#process" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
+              Process
+            </a>
+            <a href="#newsletter" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
+              Newsletter
+            </a>
           </nav>
 
           {/* Connect Button */}
