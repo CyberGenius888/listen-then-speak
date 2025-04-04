@@ -31,9 +31,6 @@ export default function Navbar() {
             <Link href="/#process">
               <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">Process</span>
             </Link>
-            <Link href="/#faq">
-              <span className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">FAQ</span>
-            </Link>
           </nav>
 
           {/* Book a Call Button */}
