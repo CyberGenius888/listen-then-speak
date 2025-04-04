@@ -1,4 +1,4 @@
-import listenThenSpeakImage from "../../assets/listen_then_speak.png";
+import listenThenSpeakImage from "../../assets/listen_then_speak_new.png";
 
 export default function About() {
   const stats = [
@@ -12,11 +12,15 @@ export default function About() {
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="relative">
+            {/* Adding a decorative background elements */}
+            <div className="absolute -right-4 -bottom-4 w-3/4 h-3/4 bg-gradient-to-r from-[#FF7A00]/20 to-[#FF7A00]/5 rounded-lg -z-10"></div>
+            <div className="absolute -left-4 -top-4 w-1/2 h-1/2 bg-gray-100 rounded-lg -z-10"></div>
+            
             <img 
               src={listenThenSpeakImage} 
-              alt="Listen Then Speak - Why Not?" 
-              className="rounded-lg shadow-lg w-full h-auto" 
+              alt="Listen Then Speak - Jahmaal Marshall" 
+              className="rounded-lg shadow-lg w-full h-auto border-4 border-white relative z-10" 
             />
           </div>
           <div>
