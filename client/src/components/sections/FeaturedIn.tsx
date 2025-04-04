@@ -1,38 +1,71 @@
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import featuredLogos from "@/assets/featured/featured_logos.png";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-// Company names matching the logos in the image
+// Import individual company logos
+import laWireLogo from "@/assets/featured/la-wire.png";
+import fastCompanyLogo from "@/assets/featured/fast-company.png";
+import laWeeklyLogo from "@/assets/featured/la-weekly.png";
+import ceoWeeklyLogo from "@/assets/featured/ceo-weekly.png";
+import canvasRebelLogo from "@/assets/featured/canvas-rebel.png";
+import forceLogo from "@/assets/featured/force.png";
+import linkedinTopVoicesLogo from "@/assets/featured/linkedin-top-voices.png";
+
+// Define company data with logos
 const companies = [
-  "The Seattle Times",
-  "Fast Company",
-  "LA Weekly",
-  "CEO Weekly",
-  "Canvas Rebel",
-  "Force",
-  "LinkedIn Top Voices"
+  { name: "Los Angeles Wire", logo: laWireLogo },
+  { name: "Fast Company", logo: fastCompanyLogo },
+  { name: "LA Weekly", logo: laWeeklyLogo },
+  { name: "CEO Weekly", logo: ceoWeeklyLogo },
+  { name: "Canvas Rebel", logo: canvasRebelLogo },
+  { name: "Force", logo: forceLogo },
+  { name: "LinkedIn Top Voices", logo: linkedinTopVoicesLogo },
 ];
 
 export default function FeaturedIn() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Setup automatic slideshow
+  const startAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % companies.length;
+        const api = (carouselRef.current as any)?.__emblaApi;
+        if (api) {
+          api.scrollTo(nextIndex);
+        }
+        return nextIndex;
+      });
+    }, 3000);
+  };
+
+  const stopAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  // Handle auto play
   useEffect(() => {
-    const startSlideshow = () => {
-      intervalRef.current = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % companies.length);
-      }, 2000); // Change company every 2 seconds
-    };
-
-    startSlideshow();
-
+    if (autoPlay) {
+      startAutoPlay();
+    }
+    
     return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
+      stopAutoPlay();
     };
-  }, []);
+  }, [autoPlay]);
+
+  // Handle hover pause
+  const handleMouseEnter = () => setAutoPlay(false);
+  const handleMouseLeave = () => setAutoPlay(true);
 
   return (
     <section className="py-16 bg-black text-white relative overflow-hidden">
@@ -44,7 +77,7 @@ export default function FeaturedIn() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
-          className="text-center mb-10"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -56,66 +89,68 @@ export default function FeaturedIn() {
           <div className="w-20 h-1 bg-[#FF7A00] mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="flex flex-col items-center">
-          {/* Logo display */}
-          <motion.div 
-            className="relative w-full max-w-5xl mx-auto mb-8"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+        <div 
+          className="max-w-6xl mx-auto"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Carousel 
+            ref={carouselRef as any} 
+            className="w-full" 
+            opts={{
+              align: "center",
+              loop: true,
+              slidesToScroll: 1,
+              startIndex: currentIndex
+            }}
+            onSelect={(api) => {
+              const selectedIndex = api?.selectedScrollSnap() || 0;
+              setCurrentIndex(selectedIndex);
+            }}
           >
-            <div className="flex justify-center">
-              <img
-                src={featuredLogos}
-                alt="Publications where Jahmaal Marshall has been featured"
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
+            <CarouselContent>
+              {companies.map((company, index) => (
+                <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pl-4 md:pl-6">
+                  <motion.div 
+                    className="bg-black/50 backdrop-blur-sm h-40 flex items-center justify-center p-6 rounded-xl border border-[#FF7A00]/20 shadow-xl hover:border-[#FF7A00]/50 transition-all duration-300"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      borderColor: "rgba(255, 122, 0, 0.5)",
+                      boxShadow: "0 20px 30px -10px rgba(0, 0, 0, 0.3)"
+                    }}
+                  >
+                    <img 
+                      src={company.logo} 
+                      alt={company.name} 
+                      className="max-h-28 w-auto object-contain filter brightness-110 hover:brightness-125 transition-all duration-300"
+                    />
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            
+            <div className="absolute -left-4 top-1/2 -translate-y-1/2 hidden md:block">
+              <CarouselPrevious className="bg-black/70 border-[#FF7A00]/30 hover:bg-[#FF7A00]/80 hover:border-[#FF7A00]" />
             </div>
-          </motion.div>
-
-          {/* Company name slideshow */}
-          <div className="h-16 flex items-center justify-center relative overflow-hidden bg-black/50 backdrop-blur-sm px-10 py-3 rounded-full border border-[#FF7A00]/20 shadow-xl">
-            {companies.map((company, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ 
-                  opacity: currentIndex === index ? 1 : 0,
-                  y: currentIndex === index ? 0 : 20,
-                  scale: currentIndex === index ? 1 : 0.8
-                }}
-                transition={{ 
-                  duration: 0.6, 
-                  ease: "easeOut" 
-                }}
-                className="absolute"
-                style={{ 
-                  display: currentIndex === index ? 'block' : 'none'
-                }}
-              >
-                <h3 className="text-xl md:text-2xl font-medium">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FF7A00] to-[#FF5500]">
-                    {company}
-                  </span>
-                </h3>
-              </motion.div>
-            ))}
-          </div>
+            <div className="absolute -right-4 top-1/2 -translate-y-1/2 hidden md:block">
+              <CarouselNext className="bg-black/70 border-[#FF7A00]/30 hover:bg-[#FF7A00]/80 hover:border-[#FF7A00]" />
+            </div>
+          </Carousel>
           
-          {/* Indicator dots */}
-          <div className="flex space-x-3 mt-6">
+          {/* Indicator dots for mobile */}
+          <div className="flex justify-center space-x-3 mt-6 md:hidden">
             {companies.map((_, index) => (
               <button
                 key={index}
                 onClick={() => {
                   setCurrentIndex(index);
-                  // Reset the interval timer when manually changing slides
-                  if (intervalRef.current) {
-                    clearInterval(intervalRef.current);
-                    intervalRef.current = setInterval(() => {
-                      setCurrentIndex((prevIndex) => (prevIndex + 1) % companies.length);
-                    }, 2000);
+                  const api = (carouselRef.current as any)?.__emblaApi;
+                  if (api) {
+                    api.scrollTo(index);
                   }
                 }}
                 className="group relative"
@@ -125,7 +160,7 @@ export default function FeaturedIn() {
                     ? "bg-[#FF7A00] scale-125" 
                     : "bg-gray-500 hover:bg-gray-400"
                 }`}
-                aria-label={`View ${companies[index]}`}
+                aria-label={`View ${companies[index].name}`}
                 />
                 <span className={`absolute -inset-1 rounded-full scale-0 transition-all duration-300 ${
                   currentIndex === index ? "bg-[#FF7A00]/30 animate-ping" : ""
