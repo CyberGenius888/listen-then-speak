@@ -4,7 +4,7 @@ export default function Booking() {
   const expectationItems = [
     {
       icon: "fas fa-clock",
-      title: "45-Minute Consultation",
+      title: "30-Minute Consultation",
       description: "We'll discuss your current challenges and goals to see if we're a good fit."
     },
     {
@@ -53,13 +53,13 @@ export default function Booking() {
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-            <h3 className="font-[Playfair_Display] text-2xl font-bold mb-6">Book Your Consultation</h3>
+            <h3 className="font-[Playfair_Display] text-2xl font-bold mb-6">Book a Free Discovery Call</h3>
             
             {/* Calendly inline widget */}
             <div id="calendly-widget" className="min-h-[500px]">
               {/* Using an iframe implementation for Calendly */}
               <iframe
-                src="https://calendly.com/your-calendly-link"
+                src="https://calendly.com/listenthenspeak/30min"
                 width="100%"
                 height="600"
                 frameBorder="0"
@@ -70,7 +70,7 @@ export default function Booking() {
             
             <div className="mt-6 text-center">
               <p className="text-sm text-gray">Prefer to reach out directly?</p>
-              <p className="font-bold text-[#FF7A00]">contact@lifecoach.com</p>
+              <p className="font-bold text-[#FF7A00]">Jahmaal@listenthenspeak.com</p>
             </div>
           </div>
         </div>

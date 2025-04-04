@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import logoPath from "@/assets/logo.png";
+import cyberGeniusLogo from "@/assets/cybergenius-logo.png";
 
 export default function Footer() {
   return (
@@ -66,11 +67,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <i className="fas fa-envelope text-[#FF7A00] mt-1 mr-3"></i>
-                <span className="text-gray-600">info@listenthenspeak.com</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-phone-alt text-[#FF7A00] mt-1 mr-3"></i>
-                <span className="text-gray-600">(555) 123-4567</span>
+                <span className="text-gray-600">Jahmaal@listenthenspeak.com</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt text-[#FF7A00] mt-1 mr-3"></i>
@@ -83,11 +80,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright and Powered By */}
         <div className="border-t border-gray-200 pt-8">
-          <p className="text-center text-gray-500">
-            &copy; {new Date().getFullYear()} Listen Then Speak. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-500 mb-4 md:mb-0">
+              &copy; {new Date().getFullYear()} Listen Then Speak. All rights reserved.
+            </p>
+            <div className="flex items-center">
+              <span className="text-gray-500 mr-2">Powered by</span>
+              <img src={cyberGeniusLogo} alt="CyberGenius" className="h-8" />
+            </div>
+          </div>
         </div>
       </div>
     </footer>

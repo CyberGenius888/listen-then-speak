@@ -34,10 +34,10 @@ export default function Navbar() {
           </nav>
 
           {/* Book a Call Button */}
-          <Link href="/#booking">
+          <Link href="/#book">
             <div>
               <Button className="bg-[#FF7A00] hover:bg-[#E56E00] text-white">
-                Book a Call
+                Book a Free Discovery Call
               </Button>
             </div>
           </Link>
