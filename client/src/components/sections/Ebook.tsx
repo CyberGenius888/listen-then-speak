@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import ebookCover from "../../assets/ebook/dear-tech-executives-new.png";
+import ebookCover from "../../assets/ebook_cover_new.png";
 
 export default function Ebook() {
   return (
@@ -26,8 +26,8 @@ export default function Ebook() {
               <img 
                 src={ebookCover} 
                 alt="Dear Tech Executives eBook by Jahmaal Marshall" 
-                className="rounded-xl shadow-2xl max-w-full h-auto transform transition-all duration-500 hover:scale-105 border-4 border-[#FF7A00]/20"
-                style={{ maxWidth: "350px", objectFit: "cover" }}
+                className="rounded-xl shadow-2xl max-w-full h-auto transform transition-all duration-500 hover:scale-105"
+                style={{ maxWidth: "300px", objectFit: "contain" }}
               />
               
               {/* Adding a subtle overlay effect */}
