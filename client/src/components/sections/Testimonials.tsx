@@ -51,8 +51,17 @@ export default function Testimonials() {
               </div>
               
               <div className="w-full md:w-2/3 text-left flex flex-col">
-                <div className="flex text-[#FF7A00] mb-4 text-xl">
-                  <i className="fas fa-quote-left text-3xl text-[#FF7A00]/30 mr-2"></i>
+                <div className="flex justify-between items-center mb-4">
+                  <div className="flex text-[#FF7A00] text-xl">
+                    <i className="fas fa-quote-left text-3xl text-[#FF7A00]/30 mr-2"></i>
+                  </div>
+                  <div className="flex text-[#FF7A00]">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
                 </div>
                 
                 <p className="text-gray-700 mb-6 text-lg italic leading-relaxed">

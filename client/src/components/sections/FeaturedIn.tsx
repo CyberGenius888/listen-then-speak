@@ -11,15 +11,43 @@ import canvasRebelLogo from "@/assets/featured/canvas-rebel.png";
 import forceLogo from "@/assets/featured/force.png";
 import linkedinTopVoicesLogo from "@/assets/featured/linkedin-top-voices.png";
 
-// Define company data with logos
+// Define company data with logos and links
 const companies = [
-  { name: "Los Angeles Wire", logo: laWireLogo },
-  { name: "Fast Company", logo: fastCompanyLogo },
-  { name: "LA Weekly", logo: laWeeklyLogo },
-  { name: "CEO Weekly", logo: ceoWeeklyLogo },
-  { name: "Canvas Rebel", logo: canvasRebelLogo },
-  { name: "Force", logo: forceLogo },
-  { name: "LinkedIn Top Voices", logo: linkedinTopVoicesLogo },
+  { 
+    name: "LA Wire", 
+    logo: laWireLogo, 
+    link: "https://lawire.com/the-hidden-costs-of-burnout-jahmaal-marshall-on-why-tackling-root-causes-saves-time-money-and-morale/"
+  },
+  { 
+    name: "Fast Company", 
+    logo: fastCompanyLogo, 
+    link: "https://www.fastcompany.com/91209334/how-to-prepare-employees-for-the-u-s-presidential-election"
+  },
+  { 
+    name: "LA Weekly Magazine", 
+    logo: laWeeklyLogo, 
+    link: "https://laweeklymagazine.com/creating-lasting-organizational-change-jahmaal-marshalls-step-by-step-multi-level-approach-for-healing-workplace-dysfunction/"
+  },
+  { 
+    name: "CEO Weekly", 
+    logo: ceoWeeklyLogo,
+    link: "https://ceoweekly.com/jahmaal-marshall-a-proactive-approach-to-mental-health/"
+  },
+  { 
+    name: "Canvas Rebel", 
+    logo: canvasRebelLogo,
+    link: "https://canvasrebel.com/meet-jahmaal-marshall/"
+  },
+  { 
+    name: "LinkedIn Top Voices", 
+    logo: linkedinTopVoicesLogo,
+    link: "https://www.linkedin.com/in/jahmaalmarshall/"
+  },
+  { 
+    name: "FORCE Magazine", 
+    logo: forceLogo,
+    link: "https://a.co/d/eDjsBwy" 
+  },
 ];
 
 export default function FeaturedIn() {
@@ -68,12 +96,12 @@ export default function FeaturedIn() {
   const handleMouseLeave = () => setAutoPlay(true);
 
   return (
-    <section className="py-16 bg-black text-white relative overflow-hidden">
+    <section className="py-16 bg-gray-200 text-gray-800 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#FF7A00]/10 to-transparent"></div>
-      <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#FF7A00]/10 to-transparent"></div>
-      <div className="absolute top-10 left-10 w-20 h-20 bg-[#FF7A00]/10 rounded-full"></div>
-      <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#FF7A00]/10 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#FF7A00]/5 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#FF7A00]/5 to-transparent"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 bg-[#FF7A00]/5 rounded-full"></div>
+      <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#FF7A00]/5 rounded-full"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
@@ -113,33 +141,44 @@ export default function FeaturedIn() {
             <CarouselContent>
               {companies.map((company, index) => (
                 <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pl-4 md:pl-6">
-                  <motion.div 
-                    className="bg-black/50 backdrop-blur-sm h-40 flex items-center justify-center p-6 rounded-xl border border-[#FF7A00]/20 shadow-xl hover:border-[#FF7A00]/50 transition-all duration-300"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ 
-                      scale: 1.05,
-                      borderColor: "rgba(255, 122, 0, 0.5)",
-                      boxShadow: "0 20px 30px -10px rgba(0, 0, 0, 0.3)"
-                    }}
+                  <a 
+                    href={company.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block cursor-pointer"
+                    aria-label={`Visit ${company.name} article`}
                   >
-                    <img 
-                      src={company.logo} 
-                      alt={company.name} 
-                      className="max-h-28 w-auto object-contain filter brightness-110 hover:brightness-125 transition-all duration-300"
-                    />
-                  </motion.div>
+                    <motion.div 
+                      className="bg-white h-40 flex items-center justify-center p-6 rounded-xl border border-[#FF7A00]/20 shadow-xl hover:border-[#FF7A00]/50 transition-all duration-300"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      whileHover={{ 
+                        scale: 1.05,
+                        borderColor: "rgba(255, 122, 0, 0.5)",
+                        boxShadow: "0 20px 30px -10px rgba(0, 0, 0, 0.3)"
+                      }}
+                    >
+                      <img 
+                        src={company.logo} 
+                        alt={company.name} 
+                        className="max-h-28 w-auto object-contain transition-all duration-300"
+                      />
+                    </motion.div>
+                    <div className="text-center mt-2 text-sm font-medium opacity-80">
+                      {company.name === "FORCE Magazine" ? "FORCE Magazine - March 2025" : company.name}
+                    </div>
+                  </a>
                 </CarouselItem>
               ))}
             </CarouselContent>
             
             <div className="absolute -left-4 top-1/2 -translate-y-1/2 hidden md:block">
-              <CarouselPrevious className="bg-black/70 border-[#FF7A00]/30 hover:bg-[#FF7A00]/80 hover:border-[#FF7A00]" />
+              <CarouselPrevious className="bg-white border-[#FF7A00]/30 hover:bg-[#FF7A00]/80 hover:text-white hover:border-[#FF7A00]" />
             </div>
             <div className="absolute -right-4 top-1/2 -translate-y-1/2 hidden md:block">
-              <CarouselNext className="bg-black/70 border-[#FF7A00]/30 hover:bg-[#FF7A00]/80 hover:border-[#FF7A00]" />
+              <CarouselNext className="bg-white border-[#FF7A00]/30 hover:bg-[#FF7A00]/80 hover:text-white hover:border-[#FF7A00]" />
             </div>
           </Carousel>
           

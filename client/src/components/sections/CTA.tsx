@@ -10,9 +10,18 @@ export default function CTA() {
         <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
           Stop letting burnout determine your success. Learn practical strategies to reclaim your time and reduce your stress.
         </p>
-        <Button asChild variant="secondary" className="bg-white text-[#FF7A00] hover:bg-gray-100 px-8 py-4 rounded-md font-bold text-lg transition-colors h-auto">
-          <a href="#ebook">Get Your Free eBook Now</a>
-        </Button>
+        <div className="flex flex-col items-center">
+          <Button asChild variant="secondary" className="bg-white text-[#FF7A00] hover:bg-gray-100 px-12 py-6 rounded-md font-extrabold text-2xl tracking-wider transition-all hover:shadow-xl h-auto transform hover:scale-105">
+            <a href="mailto:Jahmaal@listenthenspeak.com?subject=Discovery%20Call%20Request">TAKE ACTION!</a>
+          </Button>
+          <p className="mt-4 text-white font-semibold">BOOK A FREE DISCOVERY CALL</p>
+        </div>
+        
+        <div className="mt-12">
+          <Button asChild variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-md font-bold text-lg transition-colors h-auto">
+            <a href="#ebook">Get Your Free eBook Now</a>
+          </Button>
+        </div>
       </div>
     </section>
   );
