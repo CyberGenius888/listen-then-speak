@@ -16,9 +16,6 @@ export default function Navbar() {
 
           {/* Navigation Links - Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
-              Services
-            </a>
             <a href="#podcast" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
               Podcast
             </a>
@@ -27,9 +24,6 @@ export default function Navbar() {
             </a>
             <a href="#about" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
               About
-            </a>
-            <a href="#process" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
-              Process
             </a>
             <a href="#newsletter" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
               Newsletter
