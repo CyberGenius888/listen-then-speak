@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import ebookCover from "@/assets/ebook/dear-tech-executives.png";
+import ebookCover from "../../assets/ebook/dear-tech-executives-new.png";
 
 export default function Ebook() {
   return (
