@@ -50,11 +50,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <Podcast />
       <Testimonials />
       <About />
       <Process />
       <Booking />
-      <Podcast />
       <CTA />
       <Footer />
 
