@@ -1,5 +1,3 @@
-import YoutubeEmbed from "@/components/YoutubeEmbed";
-
 export default function Testimonials() {
   const testimonials = [
     {
@@ -22,19 +20,6 @@ export default function Testimonials() {
     }
   ];
 
-  const videos = [
-    {
-      id: "dQw4w9WgXcQ", // Would be replaced with actual YouTube video ID
-      title: "Sarah's Transformation",
-      description: "After feeling overwhelmed for years, I finally found the clarity I needed."
-    },
-    {
-      id: "dQw4w9WgXcQ", // Would be replaced with actual YouTube video ID
-      title: "Mark's Journey",
-      description: "The strategies I learned helped me reclaim my time and reduce my anxiety."
-    }
-  ];
-
   return (
     <section id="testimonials" className="py-20 bg-[#FF7A00]/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,19 +28,6 @@ export default function Testimonials() {
           <p className="text-lg text-gray max-w-3xl mx-auto">
             Hear directly from clients who have transformed their lives through our coaching partnership.
           </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* Video Testimonials */}
-          {videos.map((video, index) => (
-            <div key={index} className="rounded-lg overflow-hidden shadow-lg">
-              <YoutubeEmbed videoId={video.id} />
-              <div className="p-6 bg-white">
-                <h3 className="font-[Playfair_Display] text-xl font-bold mb-2">{video.title}</h3>
-                <p className="text-gray">{video.description}</p>
-              </div>
-            </div>
-          ))}
         </div>
         
         <div className="grid md:grid-cols-3 gap-6">

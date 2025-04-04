@@ -1,6 +1,7 @@
 export const YOUTUBE_VIDEO_IDS = {
-  TESTIMONIAL_1: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
-  TESTIMONIAL_2: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
+  COUNSELING_1: "dQw4w9WgXcQ", // Replace with actual counseling video ID
+  COUNSELING_2: "dQw4w9WgXcQ", // Replace with actual counseling video ID
+  COUNSELING_3: "dQw4w9WgXcQ", // Replace with actual counseling video ID
 };
 
 export interface Service {
@@ -16,7 +17,7 @@ export interface Testimonial {
   initials: string;
 }
 
-export interface VideoTestimonial {
+export interface CounselingVideo {
   id: string;
   title: string;
   description: string;
@@ -83,16 +84,21 @@ export const testimonials: Testimonial[] = [
   }
 ];
 
-export const videoTestimonials: VideoTestimonial[] = [
+export const counselingVideos: CounselingVideo[] = [
   {
-    id: YOUTUBE_VIDEO_IDS.TESTIMONIAL_1,
-    title: "Sarah's Transformation",
-    description: "After feeling overwhelmed for years, I finally found the clarity I needed."
+    id: YOUTUBE_VIDEO_IDS.COUNSELING_1,
+    title: "Understanding Anxiety",
+    description: "Learn about common anxiety triggers and effective coping strategies."
   },
   {
-    id: YOUTUBE_VIDEO_IDS.TESTIMONIAL_2,
-    title: "Mark's Journey",
-    description: "The strategies I learned helped me reclaim my time and reduce my anxiety."
+    id: YOUTUBE_VIDEO_IDS.COUNSELING_2,
+    title: "Overcoming Procrastination",
+    description: "Practical techniques to break the cycle of procrastination and boost productivity."
+  },
+  {
+    id: YOUTUBE_VIDEO_IDS.COUNSELING_3,
+    title: "Finding Your Purpose",
+    description: "How to identify your core values and align them with your daily actions."
   }
 ];
 
