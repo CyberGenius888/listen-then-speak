@@ -75,9 +75,6 @@ export default function Ebook() {
               <Button className="bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-6 text-lg rounded-md shadow-lg transition-all hover:shadow-xl">
                 Download Free eBook
               </Button>
-              <p className="mt-4 text-sm text-gray-500">
-                No email required. Instant download.
-              </p>
             </div>
           </div>
         </div>
