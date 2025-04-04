@@ -58,7 +58,7 @@ export default function Podcast() {
             </div>
 
             <a 
-              href="https://podcasts.apple.com/us/podcast/listen-then-speak-with-jahmaal-marshall/id1553454536" 
+              href="https://podcasts.apple.com/us/podcast/listen-then-speak/id1550684472" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block transition-transform duration-300 hover:scale-105"
@@ -86,7 +86,7 @@ export default function Podcast() {
             </div>
             <div className="flex gap-4">
               <Button asChild variant="outline" className="border-2 border-[#FF7A00] text-[#FF7A00] hover:bg-[#FF7A00] hover:text-white px-5 py-2 rounded-md font-semibold transition-colors">
-                <a href="https://podcasts.apple.com/us/podcast/listen-then-speak-with-jahmaal-marshall/id1553454536" target="_blank" rel="noopener noreferrer">
+                <a href="https://podcasts.apple.com/us/podcast/listen-then-speak/id1550684472" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-apple mr-2"></i>
                   Apple
                 </a>
