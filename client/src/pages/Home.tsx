@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
+import Imagine from "@/components/sections/Imagine";
 import Testimonials from "@/components/sections/Testimonials";
 import FeaturedIn from "@/components/sections/FeaturedIn";
 import About from "@/components/sections/About";
@@ -53,6 +54,7 @@ export default function Home() {
       <Hero />
       <StatsBanner />
       <Services />
+      <Imagine />
       <Podcast />
       <Testimonials />
       <FeaturedIn />
