@@ -16,14 +16,14 @@ export default function Navbar() {
 
           {/* Navigation Links - Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
+            <a href="#about" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
+              About
+            </a>
             <a href="#podcast" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
               Podcast
             </a>
             <a href="#testimonials" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
-              Testimonials
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
-              About
+              Testimonial
             </a>
             <a href="#newsletter" className="text-gray-700 hover:text-[#FF7A00] font-medium transition-colors cursor-pointer">
               Newsletter
