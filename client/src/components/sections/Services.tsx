@@ -68,7 +68,7 @@ export default function Services() {
               <div className="mt-6">
                 <a 
                   href="#ebook" 
-                  className="inline-block bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-3 rounded-full font-bold transition-colors"
+                  className="inline-block bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-3 rounded-full font-bold transition-colors text-center"
                 >
                   <div className="text-lg">TAKE ACTION!</div>
                   <div className="text-sm font-medium">BOOK A FREE DISCOVERY CALL</div>
