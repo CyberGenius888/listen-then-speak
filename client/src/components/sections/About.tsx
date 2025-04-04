@@ -26,7 +26,7 @@ export default function About() {
           <div>
             <h2 className="font-[Playfair_Display] text-3xl md:text-4xl font-bold mb-6">About My Approach</h2>
             <p className="text-gray-600 mb-6">
-              With over a decade of experience helping people overcome feeling overwhelmed, I've developed a unique coaching methodology focused on creating lasting change.
+              With over a decade of experience helping people overcome feeling overwhelmed, I've developed a unique methodology focused on creating lasting change.
             </p>
             <p className="text-gray-600 mb-6">
               My approach combines practical strategies, mindfulness techniques, and accountability systems that help you move from feeling burdened to experiencing freedom and clarity.
