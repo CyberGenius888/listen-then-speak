@@ -62,13 +62,16 @@ export default function Home() {
       <CTA />
       <Footer />
 
-      {/* Floating eBook Download Button */}
+      {/* Floating Connect Button */}
       <div className="fixed bottom-8 right-8 z-30">
         <a 
-          href="#ebook" 
+          href="https://calendly.com/listenthenspeak/30min" 
+          target="_blank" 
+          rel="noopener noreferrer"
           className="bg-[#FF7A00] hover:bg-[#E56E00] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors"
+          title="Let's connect"
         >
-          <i className="fas fa-book text-xl"></i>
+          <i className="fas fa-calendar-check text-xl"></i>
         </a>
       </div>
     </div>

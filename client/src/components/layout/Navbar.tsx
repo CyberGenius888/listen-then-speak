@@ -33,14 +33,14 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* Download eBook Button */}
-          <Link href="/#ebook">
+          {/* Connect Button */}
+          <a href="https://calendly.com/listenthenspeak/30min" target="_blank" rel="noopener noreferrer">
             <div>
               <Button className="bg-[#FF7A00] hover:bg-[#E56E00] text-white">
-                Get Free eBook
+                Let's connect
               </Button>
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </header>

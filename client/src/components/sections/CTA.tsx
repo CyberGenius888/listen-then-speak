@@ -12,7 +12,7 @@ export default function CTA() {
         </p>
         <div className="flex flex-col items-center">
           <Button asChild variant="secondary" className="bg-white text-[#FF7A00] hover:bg-gray-100 px-12 py-6 rounded-md font-extrabold text-2xl tracking-wider transition-all hover:shadow-xl h-auto transform hover:scale-105">
-            <a href="mailto:Jahmaal@listenthenspeak.com?subject=Discovery%20Call%20Request">TAKE ACTION!</a>
+            <a href="https://calendly.com/listenthenspeak/30min" target="_blank" rel="noopener noreferrer">Let's connect</a>
           </Button>
           <p className="mt-4 text-white font-semibold">BOOK A FREE DISCOVERY CALL</p>
         </div>
