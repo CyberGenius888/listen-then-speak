@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import podcastCover from "@/assets/podcast_cover.png";
+import podcastCover from "@/assets/podcast/podcast_cover_new.png";
 import podcastButton from "@/assets/podcast_button.png";
 
 export default function Podcast() {
@@ -10,14 +10,24 @@ export default function Podcast() {
           {/* Left side - Podcast Image */}
           <div className="flex justify-center">
             <div className="relative">
+              {/* Adding a glow effect behind the image */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FF7A00] to-[#FF5500] blur-[40px] opacity-20 rounded-full -z-10"></div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-[#FF7A00]/20 rounded-full -z-10"></div>
+              <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#FF7A00]/30 rounded-full -z-10"></div>
+              <div className="absolute top-1/2 right-0 w-24 h-24 bg-[#FF7A00]/10 rounded-full transform translate-x-1/2 -translate-y-1/2 -z-10"></div>
+              
+              {/* Main image with enhanced styling */}
               <img 
                 src={podcastCover} 
                 alt="Listen Then Speak Podcast with Jahmaal Marshall" 
-                className="rounded-lg shadow-xl max-w-full h-auto transform transition-transform duration-300 hover:scale-105"
-                style={{ maxWidth: "450px" }}
+                className="rounded-xl shadow-2xl max-w-full h-auto transform transition-all duration-500 hover:scale-105 border-4 border-[#FF7A00]/20"
+                style={{ maxWidth: "480px", objectFit: "cover" }}
               />
-              <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-[#FF7A00]/10 rounded-full -z-10"></div>
-              <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#FF7A00]/20 rounded-full -z-10"></div>
+              
+              {/* Adding a subtle overlay effect */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
             </div>
           </div>
 
