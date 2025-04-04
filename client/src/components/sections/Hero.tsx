@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button";
+import jahmaalImage from "@/assets/jahmaal.png";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <section className="pt-32 pb-20 bg-gradient-to-br from-[#FFA64D]/10 to-[#FF7A00]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+          >
             <h1 className="font-[Playfair_Display] text-4xl md:text-5xl lg:text-6xl font-bold text-gray-dark leading-tight mb-6">
               Find Relief From Feeling Overwhelmed
             </h1>
@@ -20,13 +26,21 @@ export default function Hero() {
                 <a href="#services">Learn more</a>
               </Button>
             </div>
-          </div>
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-              alt="Professional coach helping client" 
-              className="rounded-lg shadow-xl w-full h-auto" 
-            />
+          </motion.div>
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <div className="relative overflow-hidden rounded-lg">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FF7A00]/20 to-transparent rounded-lg"></div>
+              <img 
+                src={jahmaalImage} 
+                alt="Jahmaal Marshall - Professional Coach" 
+                className="w-full h-auto rounded-lg shadow-xl object-cover" 
+              />
+            </div>
             <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg">
               <div className="flex items-center">
                 <div className="bg-[#FF7A00] text-white p-2 rounded-full mr-3">
@@ -38,7 +52,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
