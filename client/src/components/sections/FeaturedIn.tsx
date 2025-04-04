@@ -103,9 +103,11 @@ export default function FeaturedIn() {
               slidesToScroll: 1,
               startIndex: currentIndex
             }}
-            onSelect={(api) => {
-              const selectedIndex = api?.selectedScrollSnap() || 0;
-              setCurrentIndex(selectedIndex);
+            onSelect={(api: any) => {
+              if (api && typeof api.selectedScrollSnap === 'function') {
+                const selectedIndex = api.selectedScrollSnap();
+                setCurrentIndex(selectedIndex);
+              }
             }}
           >
             <CarouselContent>

@@ -8,6 +8,7 @@ import Process from "@/components/sections/Process";
 import Booking from "@/components/sections/Booking";
 import Podcast from "@/components/sections/Podcast";
 import CTA from "@/components/sections/CTA";
+import StatsBanner from "@/components/sections/StatsBanner";
 import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
 
@@ -50,6 +51,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white">
       <Navbar />
       <Hero />
+      <StatsBanner />
       <Services />
       <Podcast />
       <Testimonials />
