@@ -101,12 +101,6 @@ export default function Podcast() {
                   Apple
                 </a>
               </Button>
-              <Button asChild variant="outline" className="border-2 border-[#FF7A00] text-[#FF7A00] hover:bg-[#FF7A00] hover:text-white px-5 py-2 rounded-md font-semibold transition-colors">
-                <a href="https://open.spotify.com/show/listen-then-speak" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-spotify mr-2"></i>
-                  Spotify
-                </a>
-              </Button>
             </div>
           </div>
         </div>
