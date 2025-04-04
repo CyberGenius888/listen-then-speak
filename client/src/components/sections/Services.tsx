@@ -70,7 +70,7 @@ export default function Services() {
                   href="#ebook" 
                   className="inline-block bg-[#FF7A00] hover:bg-[#E56E00] text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
                 >
-                  TAKE ACTION!
+                  BOOK A FREE DISCOVERY CALL!
                 </a>
               </div>
             </div>
