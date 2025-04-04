@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
+import FeaturedIn from "@/components/sections/FeaturedIn";
 import About from "@/components/sections/About";
 import Process from "@/components/sections/Process";
 import Booking from "@/components/sections/Booking";
@@ -52,6 +53,7 @@ export default function Home() {
       <Services />
       <Podcast />
       <Testimonials />
+      <FeaturedIn />
       <About />
       <Process />
       <Booking />
