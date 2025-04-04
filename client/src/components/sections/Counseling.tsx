@@ -4,24 +4,7 @@ import { Button } from "@/components/ui/button";
 import { counselingVideos } from "@/lib/data";
 
 export default function Counseling() {
-  // We'll use the video IDs from our data file, but this would typically come from a real data source
-  const counselingVideos = [
-    {
-      id: YOUTUBE_VIDEO_IDS.COUNSELING_1, // Replace with actual counseling video IDs
-      title: "Understanding Anxiety",
-      description: "Learn about common anxiety triggers and effective coping strategies."
-    },
-    {
-      id: YOUTUBE_VIDEO_IDS.COUNSELING_2, // Replace with actual counseling video IDs
-      title: "Overcoming Procrastination",
-      description: "Practical techniques to break the cycle of procrastination and boost productivity."
-    },
-    {
-      id: YOUTUBE_VIDEO_IDS.COUNSELING_3, // Replace with actual counseling video ID
-      title: "Finding Your Purpose",
-      description: "How to identify your core values and align them with your daily actions."
-    }
-  ];
+  // We'll use the counselingVideos array from data.ts
 
   const [displayedVideos, setDisplayedVideos] = useState(2);
 

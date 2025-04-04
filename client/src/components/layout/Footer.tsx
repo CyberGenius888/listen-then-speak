@@ -1,73 +1,93 @@
+import { Link } from "wouter";
+import logoPath from "@/assets/logo.png";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-dark text-white pt-16 pb-8">
+    <footer className="bg-gray-50 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          <div>
-            <div className="font-[Playfair_Display] font-bold text-2xl text-[#FF7A00] mb-4">
-              <i className="fas fa-seedling mr-2"></i>
-              <span>Life Coach</span>
-            </div>
-            <p className="text-gray-400 mb-6">
-              Helping you overcome overwhelm and live with purpose.
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          {/* Logo and Short Description */}
+          <div className="col-span-1 md:col-span-2">
+            <Link href="/">
+              <div className="inline-block mb-6">
+                <img src={logoPath} alt="Listen Then Speak" className="h-10 cursor-pointer" />
+              </div>
+            </Link>
+            <p className="text-gray-600 mb-6 max-w-md">
+              Helping you navigate life's challenges with clarity and purpose. 
+              Professional coaching that transforms overwhelm into focused action.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-[#FF7A00] transition-colors">
-                <i className="fab fa-facebook-f"></i>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
+                <i className="fab fa-facebook-f text-xl"></i>
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#FF7A00] transition-colors">
-                <i className="fab fa-instagram"></i>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
+                <i className="fab fa-twitter text-xl"></i>
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#FF7A00] transition-colors">
-                <i className="fab fa-youtube"></i>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
+                <i className="fab fa-instagram text-xl"></i>
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#FF7A00] transition-colors">
-                <i className="fab fa-linkedin-in"></i>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF7A00]">
+                <i className="fab fa-linkedin-in text-xl"></i>
               </a>
             </div>
           </div>
-          
+
+          {/* Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#services" className="text-gray-400 hover:text-[#FF7A00] transition-colors">Services</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-[#FF7A00] transition-colors">About</a></li>
-              <li><a href="#testimonials" className="text-gray-400 hover:text-[#FF7A00] transition-colors">Testimonials</a></li>
-              <li><a href="#book" className="text-gray-400 hover:text-[#FF7A00] transition-colors">Book a Session</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-bold mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-[#FF7A00] transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#FF7A00] transition-colors">Podcast</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#FF7A00] transition-colors">Free Guides</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#FF7A00] transition-colors">Newsletter</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-bold mb-4">Contact</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <ul className="space-y-4">
               <li>
-                <i className="fas fa-envelope mr-2 text-[#FF7A00]"></i>
-                contact@lifecoach.com
+                <Link href="/#services">
+                  <span className="text-gray-600 hover:text-[#FF7A00] cursor-pointer">Services</span>
+                </Link>
               </li>
               <li>
-                <i className="fas fa-phone mr-2 text-[#FF7A00]"></i>
-                (555) 123-4567
+                <Link href="/#about">
+                  <span className="text-gray-600 hover:text-[#FF7A00] cursor-pointer">About</span>
+                </Link>
               </li>
               <li>
-                <i className="fas fa-map-marker-alt mr-2 text-[#FF7A00]"></i>
-                Virtual Sessions Worldwide
+                <Link href="/#testimonials">
+                  <span className="text-gray-600 hover:text-[#FF7A00] cursor-pointer">Testimonials</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/#counseling">
+                  <span className="text-gray-600 hover:text-[#FF7A00] cursor-pointer">Counseling</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Contact</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <i className="fas fa-envelope text-[#FF7A00] mt-1 mr-3"></i>
+                <span className="text-gray-600">info@listenthenspeak.com</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-phone-alt text-[#FF7A00] mt-1 mr-3"></i>
+                <span className="text-gray-600">(555) 123-4567</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-map-marker-alt text-[#FF7A00] mt-1 mr-3"></i>
+                <span className="text-gray-600">
+                  123 Coaching Street<br />
+                  Clarity City, CS 98765
+                </span>
               </li>
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Life Coach. All rights reserved.</p>
+
+        {/* Copyright */}
+        <div className="border-t border-gray-200 pt-8">
+          <p className="text-center text-gray-500">
+            &copy; {new Date().getFullYear()} Listen Then Speak. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
