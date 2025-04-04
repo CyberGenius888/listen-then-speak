@@ -33,20 +33,26 @@ export default function Podcast() {
               I speak with great minds to unpack stories leaving the audience with practical and applicable advice.
             </p>
 
-            <div className="bg-[#FF7A00]/5 border border-[#FF7A00]/20 p-6 rounded-lg mb-8">
-              <h3 className="font-[Playfair_Display] text-xl font-bold mb-3">My goal for you is:</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-[#FF7A00] mr-2">•</span>
-                  <span>To challenge the way you think</span>
+            <div className="bg-gradient-to-br from-[#FF7A00]/15 to-[#FF7A00]/5 border border-[#FF7A00]/20 p-8 rounded-2xl mb-8 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF7A00]/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#FF7A00]/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+              
+              <h3 className="font-[Playfair_Display] text-2xl font-bold mb-5 border-b border-[#FF7A00]/30 pb-3 relative z-10">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FF7A00] to-[#FF5500]">My goal for you is:</span>
+              </h3>
+              
+              <ul className="space-y-4 relative z-10">
+                <li className="flex items-center group transition-all duration-300 hover:translate-x-1">
+                  <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#FF7A00] to-[#FF5500] text-white rounded-full flex items-center justify-center mr-3 shadow-md group-hover:shadow-lg">1</span>
+                  <span className="text-lg font-medium">To challenge the way you think</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-[#FF7A00] mr-2">•</span>
-                  <span>Help you break free from what is holding you back</span>
+                <li className="flex items-center group transition-all duration-300 hover:translate-x-1">
+                  <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#FF7A00] to-[#FF5500] text-white rounded-full flex items-center justify-center mr-3 shadow-md group-hover:shadow-lg">2</span>
+                  <span className="text-lg font-medium">Help you break free from what is holding you back</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-[#FF7A00] mr-2">•</span>
-                  <span>Drive you towards your purpose with confidence</span>
+                <li className="flex items-center group transition-all duration-300 hover:translate-x-1">
+                  <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#FF7A00] to-[#FF5500] text-white rounded-full flex items-center justify-center mr-3 shadow-md group-hover:shadow-lg">3</span>
+                  <span className="text-lg font-medium">Drive you towards your purpose with confidence</span>
                 </li>
               </ul>
             </div>
