@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Logo and Short Description */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/">
@@ -29,33 +29,6 @@ export default function Footer() {
                 <i className="fab fa-linkedin-in text-xl"></i>
               </a>
             </div>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="/#services">
-                  <span className="text-gray-600 hover:text-[#FF7A00] cursor-pointer">Services</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#about">
-                  <span className="text-gray-600 hover:text-[#FF7A00] cursor-pointer">About</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#testimonials">
-                  <span className="text-gray-600 hover:text-[#FF7A00] cursor-pointer">Testimonials</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#counseling">
-                  <span className="text-gray-600 hover:text-[#FF7A00] cursor-pointer">Counseling</span>
-                </Link>
-              </li>
-            </ul>
           </div>
 
           {/* Contact */}
